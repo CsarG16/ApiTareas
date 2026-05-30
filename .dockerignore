@@ -1,0 +1,12 @@
+**/.dockerignore
+**/.git
+**/.gitignore
+**/.vs
+**/bin
+**/obj
+**/.antigravitycli
+**/.gemini
+**/tareas.db
+**/tareas.db-journal
+**/tareas.db-shm
+**/tareas.db-wal

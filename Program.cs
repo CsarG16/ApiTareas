@@ -32,17 +32,20 @@ builder.Services.AddSingleton<ApiTareas.Services.IMlService, ApiTareas.Services.
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Aplicar migraciones automáticamente al iniciar (necesario para Render/Docker)
+using (var scope = app.Services.CreateScope())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var db = scope.ServiceProvider.GetRequiredService<TareasDbContext>();
+    db.Database.Migrate();
 }
 
-app.UseHttpsRedirection();
+// Habilitar Swagger en todos los entornos (para que funcione en Render)
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
