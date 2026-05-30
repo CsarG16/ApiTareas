@@ -1,0 +1,81 @@
+Comentario,Sentimiento
+La tarea fue completada correctamente y el sistema funciona bien,true
+Excelente trabajo del equipo en este proyecto,true
+Todo salió perfecto y a tiempo,true
+El sistema funciona de manera estable y sin errores,true
+Muy buen desempeño en la entrega del proyecto,true
+La implementación fue exitosa y cumple con los requisitos,true
+El equipo trabajó de forma eficiente y organizada,true
+Se completó la tarea antes de la fecha límite,true
+El cliente quedó muy satisfecho con los resultados,true
+La calidad del código es excelente,true
+Buen trabajo resolviendo el problema rápidamente,true
+La tarea se realizó sin ningún inconveniente,true
+El rendimiento del sistema mejoró significativamente,true
+Se logró el objetivo propuesto con éxito,true
+La documentación está clara y bien organizada,true
+El proyecto avanza según lo planificado,true
+Gran colaboración entre los miembros del equipo,true
+La solución implementada es eficiente y escalable,true
+Se resolvieron todos los bugs reportados exitosamente,true
+La interfaz de usuario es intuitiva y fácil de usar,true
+Las pruebas unitarias pasaron sin problemas,true
+El código fue revisado y aprobado por todo el equipo,true
+La migración de base de datos se ejecutó correctamente,true
+El despliegue en producción fue exitoso y sin interrupciones,true
+Se cumplieron todos los criterios de aceptación del sprint,true
+La API responde rápidamente y con los datos correctos,true
+El cliente aprobó la demo sin observaciones,true
+La integración con el servicio externo funciona perfectamente,true
+Se mejoró la cobertura de pruebas al noventa por ciento,true
+La tarea fue entregada con documentación completa,true
+El refactoreo del código mejoró la mantenibilidad del proyecto,true
+Se automatizó exitosamente el proceso de despliegue,true
+Los endpoints de la API están bien diseñados y documentados,true
+El equipo resolvió el problema técnico de forma creativa,true
+La base de datos fue optimizada y las consultas son más rápidas,true
+Se implementaron las validaciones correctamente en todos los formularios,true
+El sistema pasó todas las pruebas de seguridad,true
+La experiencia del usuario mejoró notablemente con los cambios,true
+Se logró reducir el tiempo de carga de la aplicación,true
+El sprint se cerró cumpliendo con todos los entregables,true
+El sistema no funciona correctamente y tiene muchos errores,false
+La tarea no se completó a tiempo,false
+Hay demasiados bugs sin resolver en el sistema,false
+El rendimiento del sistema es muy malo y lento,false
+No se cumplieron los requisitos del proyecto,false
+El código tiene mala calidad y es difícil de mantener,false
+El equipo no logró terminar a tiempo la entrega,false
+El cliente está insatisfecho con los resultados obtenidos,false
+La implementación tiene fallos críticos en producción,false
+No se siguieron las buenas prácticas de desarrollo,false
+El proyecto está retrasado y fuera de presupuesto,false
+La documentación es confusa e incompleta,false
+El sistema se cae constantemente y no es estable,false
+Hay problemas graves de seguridad en la aplicación,false
+La tarea fue mal ejecutada y necesita rehacerse,false
+El desempeño del equipo fue deficiente esta semana,false
+No se pudo resolver el error crítico reportado,false
+La base de datos tiene problemas de integridad,false
+El deploy falló y el sistema quedó fuera de servicio,false
+La comunicación del equipo fue pésima en este sprint,false
+Las pruebas fallaron y hay regresiones en el sistema,false
+El servidor se saturó por mala gestión de recursos,false
+No se documentó nada y nadie entiende el código,false
+El endpoint devuelve datos incorrectos y sin validaciones,false
+La migración de base de datos falló y se perdieron registros,false
+El cliente rechazó la entrega por incumplimiento de requisitos,false
+La API tiene tiempos de respuesta inaceptables,false
+Se introdujeron nuevos bugs al intentar corregir los anteriores,false
+La integración con el servicio externo falla constantemente,false
+No se realizaron pruebas antes de subir los cambios a producción,false
+El sprint terminó con la mitad de las tareas sin completar,false
+La interfaz tiene errores visuales y no es responsiva,false
+El código tiene dependencias obsoletas y vulnerabilidades conocidas,false
+Se perdió información importante por falta de respaldos,false
+El equipo no siguió el flujo de trabajo acordado con las ramas,false
+La API no maneja correctamente los errores y devuelve status 500,false
+El sistema consume demasiada memoria y se vuelve inestable,false
+No se implementaron las validaciones y se pueden ingresar datos incorrectos,false
+El proyecto no tiene pruebas automatizadas y todo se prueba manualmente,false
+La planificación fue mala y no se estimaron bien los tiempos,false

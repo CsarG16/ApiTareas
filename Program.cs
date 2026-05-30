@@ -26,6 +26,10 @@ builder.Services.AddHttpClient<ApiTareas.Services.ITareasExternasService, ApiTar
     client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
 });
 
+// Registrar el servicio de ML.NET como Singleton (el modelo se entrena una sola vez al iniciar)
+builder.Services.AddSingleton<ApiTareas.Services.IMlService, ApiTareas.Services.MlService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
