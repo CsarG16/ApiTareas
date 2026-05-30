@@ -20,9 +20,51 @@ namespace ApiTareas.Controllers
 
         // GET: api/tareas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Tarea>>> GetTareas()
+        public async Task<ActionResult<IEnumerable<Tarea>>> GetTareas(
+            [FromQuery] string? estado,
+            [FromQuery] string? prioridad,
+            [FromQuery] DateTime? fechaInicio,
+            [FromQuery] DateTime? fechaFin)
         {
-            var tareas = await _context.Tareas.ToListAsync();
+            var query = _context.Tareas.AsQueryable();
+
+            // Validación y filtrado por Estado
+            if (!string.IsNullOrEmpty(estado))
+            {
+                if (!System.Enum.TryParse<EstadoTarea>(estado, true, out var estadoEnum))
+                {
+                    return BadRequest(new { mensaje = $"El estado '{estado}' no es válido. Valores permitidos: Pendiente, EnProceso, Completada." });
+                }
+                query = query.Where(t => t.Estado == estadoEnum);
+            }
+
+            // Validación y filtrado por Prioridad
+            if (!string.IsNullOrEmpty(prioridad))
+            {
+                if (!System.Enum.TryParse<PrioridadTarea>(prioridad, true, out var prioridadEnum))
+                {
+                    return BadRequest(new { mensaje = $"La prioridad '{prioridad}' no es válida. Valores permitidos: Baja, Media, Alta." });
+                }
+                query = query.Where(t => t.Prioridad == prioridadEnum);
+            }
+
+            // Validación y filtrado por Rango de Fechas
+            if (fechaInicio.HasValue && fechaFin.HasValue && fechaInicio.Value > fechaFin.Value)
+            {
+                return BadRequest(new { mensaje = "La fechaInicio no puede ser mayor que la fechaFin." });
+            }
+
+            if (fechaInicio.HasValue)
+            {
+                query = query.Where(t => t.FechaVencimiento.Date >= fechaInicio.Value.Date);
+            }
+
+            if (fechaFin.HasValue)
+            {
+                query = query.Where(t => t.FechaVencimiento.Date <= fechaFin.Value.Date);
+            }
+
+            var tareas = await query.ToListAsync();
             return Ok(tareas);
         }
 
