@@ -20,6 +20,12 @@ builder.Services.AddDbContext<TareasDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Registrar HttpClient tipado para el servicio de tareas externas
+builder.Services.AddHttpClient<ApiTareas.Services.ITareasExternasService, ApiTareas.Services.TareasExternasService>(client =>
+{
+    client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
